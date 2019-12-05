@@ -31,7 +31,7 @@ let xdemb = new Discord.RichEmbed()
         await member.ban(reason).catch(error => message.channel.send(`:x: Nem tudtam kitiltani mert: ${error}`));
 
         let bean = new Discord.RichEmbed()
-        .setColor("#a234b4")
+        .setColor("#cf8810")
         .setTitle(`Kitiltva | ${member.user.tag}`)
         .addField("Felhasználó:", member, true)
         .addField("Általa:", message.author, true)
