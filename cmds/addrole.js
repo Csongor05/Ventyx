@@ -6,18 +6,18 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] == "help"){
     let helpembxd = new Discord.RichEmbed()
     .setColor("#00ff00")
-    .addField("Addrole Parancs", "Használat: f.addrole <említés> <rang>")
+    .addField("Addrole Parancs", "Használat: v.addrole <említés> <rang>")
 
     message.channel.send(helpembxd);
     return;
   } 
 
   let xdemb = new Discord.RichEmbed()
-  .setColor("#00ff00")
+  .setColor("#cf8810")
   .setTitle(`Addrole Parancs`)
   .addField("Leírás:", "Rangot add a felhasználónak", true)
-  .addField("Használat:", "f.addrole <említés> <rang>", true)
-  .addField("Példa:", "f.addrole @Csongor Játékos")
+  .addField("Használat:", "v.addrole <említés> <rang>", true)
+  .addField("Példa:", "v.addrole @Csongor Játékos")
 
   if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send(":x: Nincs jogod használni a parancsot!");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
