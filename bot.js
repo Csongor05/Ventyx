@@ -40,7 +40,7 @@ console.log(`Bots is ready and working in ${bot.guilds.size} servers with ${bot.
     
 bot.user.setStatus('Online')
 
-bot.user.setActivity(` ${bot.guilds.size} Szerver | f.help`);
+bot.user.setActivity(`play.ventyx.tk| 1.8 - 1.12.2`);
     
     bot.channels.get("521378814467506176").setName(`Szerverek: ${bot.guilds.size}/100`)
     
