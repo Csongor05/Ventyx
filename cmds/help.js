@@ -10,41 +10,40 @@ module.exports.run = async (bot, message, args) => {
     const pidor = message.guild.members.get(args[0]) || message.member;
 
     let funEmbed = new Discord.RichEmbed()
-    .setColor("00ff00")
+    .setColor("#cf8810")
     .setTitle("**__Parancsok__**")
-    .setDescription("https://firefox-weboldal.webnode.hu/parancsok/")
+    .setDescription(funcommands)
     
     pidor.send(funEmbed);
 
     let infoEmbed = new Discord.RichEmbed()
-    .setColor("00ff00")
-    .setTitle("**__Bot Info__**")
-    .setDescription("https://firefox-weboldal.webnode.hu/rolam/")
+    .setColor("#cf8810")
+    .setTitle("**__Szerver IP__**")
+    .setDescription("**hamarosan**")
 
     pidor.send(infoEmbed);
 
     let modembed = new Discord.RichEmbed()
-    .setColor("00ff00")
-    .setTitle("**__Bot Invite__**")
-    .setDescription("bit.ly/firefoxinvite")
+    .setColor("#cf8810")
+    .setTitle("**__Verzió__**")
+    .setDescription("**1.8**-**1.12.2**")
     
     pidor.send(modembed);
 
     let supEmbed = new Discord.RichEmbed()
-    .setColor("#00ff00")
-    .setTitle("Support")
-    .setImage("https://cdn.discordapp.com/avatars/291221132256870400/4f71fea454b62405b55f2fe0d8e7db0c.png?size=2048")
-    .setDescription("Segítségre szorulsz? Csatlakozz be! [Support Szerver](https://discord.gg/HBqCEZs) Vagy itt a weboldal! [FireFox-Weboldal](https://firefox-weboldal.webnode.hu/)")
-    .setFooter("<> - Kötelező megadni [] - Nem kötelező megadni")
+    .setColor("#cf8810")
+    .setTitle("Help")
+    .setDescription("Segítségre szozrulsz? Csatlakozz be! [Discord Szerver](https://discord.gg/qmtfV6w)")
+    .setFooter("Olvasd el a szabályokot, és tartsd be őket!")
     .setTimestamp()
-    .addField("Contact", "Készítővel akarsz beszélni? `f.contact`")
+    .addField("Csalót láttál?", "Jelentsd egy csapattagnak! ")
 
     pidor.send(supEmbed)
 
     let chanEmbed = new Discord.RichEmbed()
     .setTitle("Help")
-    .setColor("#0ff00")
-    .setFooter(`Help parancsot lekérte:: ${pidor.user.username}`)
+    .setColor("#cf8810")
+    .setFooter(`Help parancsot lekérte: ${pidor.user.username}`)
     .setDescription(`${pidor} :white_check_mark: Privát üzenetben elküldtem a parancsokat`);
 
     message.channel.send(chanEmbed).then(msg => {msg.delete(5000)});

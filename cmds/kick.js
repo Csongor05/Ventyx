@@ -4,11 +4,11 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")  && message.author.id !== "366992986896203780") return message.channel.send(":x: Nincs jogod használni a parancsot!");
     
   let xdemb = new Discord.RichEmbed()
-  .setColor("#00ff00")
+  .setColor("#cf8810")
   .setTitle("Kick Parancs")
   .addField("Leírás:", `Kickeli a felhasználót`, true)
-  .addField("Használat:", "f.kick <felhasználó> [indok]", true)
-  .addField("Példa:" ,"f.kick @Csongi Spam")
+  .addField("Használat:", "v.kick <felhasználó> [indok]", true)
+  .addField("Példa:" ,"v.kick @Csongi Spam")
 
     let member = message.mentions.members.first();
     if(!member) return message.channel.send(xdemb)
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
       .catch(error => message.reply(`:x: Nem tudtam ki kickelni, mert : ${error}`));
 
       let kick = new Discord.RichEmbed()
-      .setColor("#00ff00")
+      .setColor("#cf8810")
       .setTitle(`Kick | ${member.user.tag}`)
       .addField("Felhasználó", member, true)
       .addField("Általa", message.author, true)

@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     let inline = true
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setColor("#00ff00")
+    .setColor("#cf8810")
     .setThumbnail(sicon)
     .setAuthor(message.guild.name)
     .addField("Név", message.guild.name, inline)

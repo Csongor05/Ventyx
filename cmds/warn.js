@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
 
   let dmsEmbed = new Discord.RichEmbed()
   .setTitle("Warn")
-  .setColor("#00ff00")
+  .setColor("#cf8810")
   .setDescription(`Figyelmeztettve lettél innen: \`${message.guild.name}\``)
   .addField("Általa:", message.author.tag)
   .addField("Indok", reason);
@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 
   message.delete();
   
-  message.channel.send(`${user.tag} has been warned`)
+  message.channel.send(`${user.tag} figyelmeztettve lett`)
 
 }
 

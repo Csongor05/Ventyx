@@ -3,19 +3,19 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
   if(args[0] == "help"){
     let helpembxd = new Discord.RichEmbed()
-    .setColor("#00ff00")
-    .addField("Removerole Parancs", "Használat: f.removerole <@felhasználó> <rang>")
+    .setColor("#a234b4")
+    .addField("Removerole Parancs", "Használat: v.removerole <@felhasználó> <rang>")
 
     message.channel.send(helpembxd);
     return;
   } 
 
   let xdemb = new Discord.RichEmbed()
-  .setColor("#00ff00")
+  .setColor("#cf8810")
   .setTitle(`Removerole parancs`)
   .addField("Leírás:", "Elveszi a rangot a felhasználóról", true)
-  .addField("Használat!", "f.removerole <@felhasználó> <rang>", true)
-  .addField("Példa!", "f.removerole @Csongi Játékos")
+  .addField("Használat!", "v.removerole <@felhasználó> <rang>", true)
+  .addField("Példa!", "v.removerole @Csongi Játékos")
 
   if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send(":x: Nincs jogod használni a parancsot");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);

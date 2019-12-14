@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
            .setDescription(`**${current.skytext}**`) //How the sky looks like
            .setAuthor(`Időjárás ${current.observationpoint}`) //Shows the current location of the weater
            .setThumbnail(current.imageUrl) //Sets thumbnail of the embed
-           .setColor(0x00AE86) //Sets the color of the embed
+           .setColor("#cf8810") //Sets the color of the embed
            .addField("Időzóna", `UTC${location.timezone}`, true) //Shows the timezone
            .addField("Fok típusa", location.degreetype, true) //Shows the degrees in Celcius
            .addField("Hőmérséklet", `${current.temperature}`, true)

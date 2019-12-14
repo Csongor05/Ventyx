@@ -31,14 +31,14 @@ module.exports.run = async (bot, message, args) => {
   }
 
   let mutetime = args[1];
-  if(!mutetime) return message.channel.send("Nen adtál meg időt!");
+  if(!mutetime) return message.channel.send("Nem adtál meg időt!");
 
   await(tomute.addRole(muterole.id));
   message.reply(`<@${tomute.id}> le lett némítva ennyi időre: ${ms(ms(mutetime))}`);
 
   setTimeout(function(){
     tomute.removeRole(muterole.id);
-    message.channel.send(`<@${tomute.id}> Feloldva a némítása!`);
+    message.channel.send(`<@${tomute.id}> Feloldva a némításod!`);
   }, ms(mutetime));
 
   message.delete();

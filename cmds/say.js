@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     
-    if(message.author.id === "647091061977513994") return
-    if(message.author.id === "647091061977513994") return
+    if(message.author.id === "650619955817086996") return
+    if(message.author.id === "650619955817086996") return
     
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
