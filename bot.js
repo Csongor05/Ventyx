@@ -68,6 +68,6 @@ bot.on("message", async message => {
     
 });
 
-bot.login("NjQ3MDkxMDYxOTc3NTEzOTk0.XdwFOw._XxJQJUIeybp2wxySSyOKhjAbuE");
+bot.login("token tesa");
 
 //restart
