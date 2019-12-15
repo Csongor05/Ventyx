@@ -16,11 +16,11 @@ fs.readdir("./cmds", (err, files) => {
 
     let jsfiles = files.filter(f => f.split(".").pop() === "js");
     if(jsfiles.length <= 0) {
-        console.log("No commands found to load!");
+        console.log("Parancs nem találva");
         return;
     }
 
-    console.log(`Loading ${jsfiles.length} commands!`);
+    console.log(`Betöltve ${jsfiles.length} parancs!`);
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
@@ -30,7 +30,7 @@ fs.readdir("./cmds", (err, files) => {
 });
 
 bot.on("ready", async () => {
-console.log(`Bots is ready and working in ${bot.guilds.size} servers with ${bot.users.size} users!`);
+console.log(`Bot elérhető, dolgozik ${bot.guilds.size} szerveren ${bot.users.size} felhasználóval!`);
     
     dbl.postStats(bot.guilds.size);
  
@@ -40,7 +40,7 @@ console.log(`Bots is ready and working in ${bot.guilds.size} servers with ${bot.
     
 bot.user.setStatus('Online')
 
-bot.user.setActivity(`play.ventyx.tk| 1.8 - 1.12.2`);
+bot.user.setActivity(`play.ventyx.tk | 1.8 - 1.12.2`);
     
     bot.channels.get("521378814467506176").setName(`Szerverek: ${bot.guilds.size}/100`)
     
